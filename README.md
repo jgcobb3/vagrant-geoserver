@@ -31,7 +31,7 @@ Your host machine should have at least 6GB of memory, a modern x86-64 processor,
 
 1. [Clone](http://git-scm.com/docs/git-clone) this repository.
 
-   `git clone https://github.com/stumptownlabs/vagrant-geoserver.git`
+   `git clone https://github.com/stumptownlabs/vagrant-geoserver.git geosever`
 
    Note: If you wish to submit patches to this repository, you should consider [forking this repository](https://help.github.com/articles/fork-a-repo/).
 
