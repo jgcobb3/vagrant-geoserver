@@ -1,5 +1,5 @@
 # vagrant.geowave
-A Vagrant environment for deploying Geoserver.
+A Vagrant environment for deploying Geoserver 2.7.0.
 
 Vagrant and Ansible must be installed.
 =======
@@ -37,11 +37,7 @@ Your host machine should have at least 6GB of memory, a modern x86-64 processor,
 
 2. Install required software listed above
 
-3. Navigate into the directory created by cloning `vagrant.geowave`
-
-4. Clone Geowave from your forked repository.
-
-   At this point, the directories in the `vagrant-geoserver` directory should look like this.
+3. At this point, the directories in the `vagrant-geoserver` directory should look like this.
     ```
     vagrant-geoserver
     ├── ansible
@@ -49,14 +45,16 @@ Your host machine should have at least 6GB of memory, a modern x86-64 processor,
     └── Vagrantfile
 	```
 
-5. In the top level directory with the `Vagrantfile` bring up the virtual machine at the command line.
+4. In the top level directory with the `Vagrantfile` bring up the virtual machine at the command line.
 
    `vagrant up`
 
    At this point Vagrant will start the virtual machine and begin provisioning it with Ansible. Depending on internet connection speeds, installation and downloading of all dependencies could take some time.
 
-6. Once the machine finishes provisioning, you can verify that Accumulo and HDFS are running by navigating to their web UIs.
+5. Once the machine finishes provisioning, you can verify that Geoserver is running by navigating to their web UI.
    - Geoserver: http://localhost:8080
+   
+   The default username is 'admin' and password is 'geoserver'
    
 ## Attribution
 
