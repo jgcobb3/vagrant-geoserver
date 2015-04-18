@@ -1,0 +1,28 @@
+---
+- hosts: all
+  user: vagrant
+  sudo: yes
+
+  vars:
+    postgresql_listen_addresses: "*"
+    postgresql_hba_mapping:
+      - { type: "host", database: "all", user: "all", address: "0.0.0.0/0", method: "md5" }
+      - { type: "host", database: "all", user: "all", address: "10.0.2.0/24", method: "md5" }
+    postgresql_version: "9.4"
+    postgresql_package_version: "9.4.*-1.pgdg14.04+1"
+
+  pre_tasks:
+    - name: Update Apt cache
+      apt: update_cache=yes
+
+  roles:
+    - { "role": "azavea.unzip" }
+    - { "role": "azavea.java" }
+    - { "role": "azavea.git" }
+    - { "role": "azavea.postgresql-support" }
+    - { "role": "azavea.postgresql" }
+    - { "role": "azavea.postgis" }
+    - { "role": "azavea.apache2" }
+    - { "role": "stumptownlabs.tomcat" }
+    - { "role": "stumptownlabs.geoserver" }
+

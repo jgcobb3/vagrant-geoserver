@@ -1,0 +1,7 @@
+---
+prefix: /usr/local
+local_lib_path: /usr/local/lib
+
+home_path: /home/vagrant
+
+java_version: "7u75-2.5.4*"
